@@ -1,0 +1,155 @@
+@font-face{
+    font-family: equation;
+    src: url(../Fonts/Lato-Regular.ttf);
+}
+@font-face{
+    font-family: result;
+    src: url(../Fonts/Lato-Light.ttf);
+}
+@font-face{
+    font-family: sign;
+    src: url(../Fonts/Lato-Hairline.ttf);
+}
+$scrren-color: #212121;
+$operator-color: #9156e1;
+$value-color: #ffffff;
+$equale-color: #e62f89;
+$scrren-text-color: #d98192;
+$scrren-answer-color: #ffffff;
+
+$scrren-text-size: 1.5em;
+$scrren-answer-size: 4.16em;
+$button-text-size: 1.833em;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(243, 242, 242);
+    background: linear-gradient(125deg, rgba(117,88,222,1) 0%, rgba(255,144,100,1) 74%);
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+.w-100-p{
+    width: 100%;
+}
+.m-0{
+    margin: 0;
+}
+.p-0{
+    padding: 0;
+}
+.w-25-p{
+    width: 25%;
+}
+.w-33-p{
+    width: 33.3333%;
+}
+.w-50-p{
+    width: 50%;
+}
+
+.cal-area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cal-body{
+    max-width: 370px;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    margin: 10px 0px 10px 0px;
+}
+.cal-screen{
+    background-color: $scrren-color;
+}
+.screen-value{
+    padding: 36px 30px 36px 30px;
+    input{
+        width: 100%;
+        background: transparent;
+        border: 0;
+    }
+    p,input{
+        text-align: right;
+        margin: 0;
+        padding: 0;
+    }
+    p:nth-child(1),input{
+        color: $scrren-text-color;
+        font-size: $scrren-text-size;
+        font-family: equation;
+    }
+    p:nth-child(2){
+        color: $scrren-answer-color;
+        font-family: result;
+        font-size: $scrren-answer-size;
+    }
+}
+.cal-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    button{
+        width: 100%;
+        text-align: center;
+        color: $scrren-color;
+        font-family: result;
+        font-size: $button-text-size;
+        background-color: transparent;
+        border: 0px solid;
+        padding: 30px 0px 30px 0px;
+    }
+    
+}
+.normal-button-color{
+    background: rgb(255,255,255);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(244,244,244,1) 50%);
+}
+.sign-button-color{
+    background: rgb(145,86,225);
+    background: linear-gradient(135deg, rgba(145,86,225,1) 0%, rgba(133,71,217,1) 50%);
+}
+.equal-button-color{
+    background: #e62f89;
+}
+.white-text{
+    color: #ffffff !important; 
+}
+
+@media all and (min-width: 370.5px){    /*when screen width greater than 371px*/
+    .cal-body{
+        width: 370px;
+    }
+}
+@media all and (min-height: 700px){ /*when screen height greater than 700px*/
+    body{
+        height: 100vh;
+    }
+}
+@media all and (max-width: 369.9px){    /*when screen width belongs to 370px*/
+    body{
+        height: 100vh;
+    }
+    .screen-value{
+        padding: 26px 10px 26px 10px;
+        p:nth-child(1){
+            font-size: 1em;
+        }
+        p:nth-child(2){
+            font-size: 1.5em;
+        }
+    }
+    .cal-buttons{
+        button{
+            font-size: 1em;
+            padding: 10px 0px 10px 0px;
+        }
+        
+    }
+}
